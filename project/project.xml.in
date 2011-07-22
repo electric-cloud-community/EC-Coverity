@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exportedData version="39" buildLabel="" buildVersion="3.5.0.0">
+  <exportPath>/projects/@PLUGIN_KEY@-@PLUGIN_VERSION@</exportPath>
+  <project>
+    <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
+    <propertySheet>
+
+      <property>
+        <propertyName>scripts</propertyName>
+        <description></description>
+        <propertySheet>
+          <property>
+            <propertyName>CoverityDriver</propertyName>
+            <description></description>
+            <expandable>1</expandable>
+            <value></value>
+          </property>
+        </propertySheet>
+      </property>
+      
+      <property>
+        <propertyName>Coverity_forms</propertyName>
+        <description></description>
+        <propertySheet>
+          <property>
+            <propertyName>wizardCustomEditor</propertyName>
+            <description></description>
+            <expandable>1</expandable>
+            <value></value>
+          </property>
+        </propertySheet>
+      </property>
+      
+      <property>
+        <propertyName>ec_setup</propertyName>
+        <value></value>
+        <expandable>0</expandable>
+      </property>
+      
+      <property>
+        <propertyName>postp_matchers</propertyName>
+        <value></value>
+        <expandable>0</expandable>
+      </property>
+      
+      <property>
+        <propertyName>ec_visibility</propertyName>
+        <description></description>
+        <expandable>1</expandable>
+        <value>pickListOnly</value>
+      </property>        
+      
+	</propertySheet>
+
+    <procedure>
+      <procedureName>runCoverity</procedureName>
+      <description>runs Coverity static analysis tasks</description>
+      <jobNameTemplate></jobNameTemplate>
+      <resourceName></resourceName>
+      <workspaceName></workspaceName>
+      <projectName>EC-Coverity</projectName>
+      <propertySheet>
+        <property>
+          <propertyName>ec_customEditorData</propertyName>
+          <propertySheet>
+            <property>
+              <propertyName>parameters</propertyName>
+              <propertySheet>
+                
+                <property>
+                  <propertyName>Coverity_path</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property>
+                
+                <property>
+                  <propertyName>Intermediate_directory</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property> 
+                
+                <property>
+                    <propertyName>Language</propertyName>
+                    <propertySheet>
+						<property>
+							<propertyName>options</propertyName>
+							<propertySheet>
+								<property>
+									<propertyName>option1</propertyName>
+									<propertySheet>
+										<property>
+										  <propertyName>text</propertyName>
+										  <expandable>1</expandable>
+										  <value>Java</value>
+										</property>
+										<property>
+										  <propertyName>value</propertyName>
+										  <expandable>1</expandable>
+										  <value>java</value>
+										</property>
+									</propertySheet>
+								</property>
+								
+								<property>
+								  <propertyName>option2</propertyName>
+								  <propertySheet>
+									<property>
+									  <propertyName>text</propertyName>
+									  <value>C++</value>
+									</property>
+									<property>
+									  <propertyName>value</propertyName>
+									  <value>cpp</value>
+									</property>
+								  </propertySheet>
+								</property>
+								
+								<property>
+								  <propertyName>option3</propertyName>
+								  <propertySheet>
+									<property>
+									  <propertyName>text</propertyName>
+									  <value>C#</value>
+									</property>
+									<property>
+									  <propertyName>value</propertyName>
+									  <value>csharp</value>
+									</property>
+									
+								  </propertySheet>
+								</property>
+							   
+							    <property>
+								  <propertyName>optionCount</propertyName>
+								  <expandable>1</expandable>
+								  <value>3</value>
+								</property>
+								
+								<property>
+								  <propertyName>type</propertyName>
+								  <expandable>1</expandable>
+								  <value>list</value>
+								</property> 
+								
+							</propertySheet>
+						</property>
+					</propertySheet>
+				</property>
+                
+                <property>
+                  <propertyName>Build_command</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property> 
+ 
+                <property>
+                  <propertyName>Debug</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>checkedValue</propertyName>
+                      <expandable>1</expandable>
+                      <value>1</value>
+                    </property>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                    <property>
+                      <propertyName>initiallyChecked</propertyName>
+                      <expandable>1</expandable>
+                      <value>0</value>
+                    </property>
+                    <property>
+                      <propertyName>uncheckedValue</propertyName>
+                      <expandable>1</expandable>
+                      <value>0</value>
+                    </property>
+                  </propertySheet>
+                </property>
+                
+                <property>
+                  <propertyName>Verbosity_level</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>options</propertyName>
+                      <propertySheet>
+                        <property>
+                          <propertyName>option1</propertyName>
+                          <propertySheet>
+                            <property>
+                              <propertyName>text</propertyName>
+                              <expandable>1</expandable>
+                              <value>1</value>
+                            </property>
+                            <property>
+                              <propertyName>value</propertyName>
+                              <expandable>1</expandable>
+                              <value>1</value>
+                            </property>
+                          </propertySheet>
+                        </property>
+                        <property>
+                          <propertyName>option2</propertyName>
+                          <propertySheet>
+                            <property>
+                              <propertyName>text</propertyName>
+                              <expandable>1</expandable>
+                              <value>2</value>
+                            </property>
+                            <property>
+                              <propertyName>value</propertyName>
+                              <expandable>1</expandable>
+                              <value>2</value>
+                            </property>
+                          </propertySheet>
+                        </property>
+                        <property>
+                          <propertyName>option3</propertyName>
+                          <propertySheet>
+                            <property>
+                              <propertyName>text</propertyName>
+                              <expandable>1</expandable>
+                              <value>3</value>
+                            </property>
+                            <property>
+                              <propertyName>value</propertyName>
+                              <expandable>1</expandable>
+                              <value>3</value>
+                            </property>
+                          </propertySheet>
+                        </property>
+                        <property>
+                          <propertyName>option4</propertyName>
+                          <propertySheet>
+                            <property>
+                              <propertyName>text</propertyName>
+                              <expandable>1</expandable>
+                              <value>4</value>
+                            </property>
+                            <property>
+                              <propertyName>value</propertyName>
+                              <expandable>1</expandable>
+                              <value>4</value>
+                            </property>
+                          </propertySheet>
+                        </property> 
+                        <property>
+                          <propertyName>optionCount</propertyName>
+                          <expandable>1</expandable>
+                          <value>5</value>
+                        </property>
+                        <property>
+                          <propertyName>type</propertyName>
+                          <expandable>1</expandable>
+                          <value>list</value>
+                        </property>
+                      </propertySheet>
+                    </property>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property> 
+                
+                <property>
+                  <propertyName>AssemblyFiles</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property> 
+                
+                <property>
+                  <propertyName>Config_file</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property> 
+                
+                <property>
+                  <propertyName>ExtraBuildCommands</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property>
+                
+                <property>
+                  <propertyName>ExtraAnalyzeCommands</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property>
+                
+                <property>
+                  <propertyName>workingdir</propertyName>
+                  <propertySheet>
+                    <property>
+                      <propertyName>formType</propertyName>
+                      <expandable>1</expandable>
+                      <value>standard</value>
+                    </property>
+                  </propertySheet>
+                </property>
+                
+              </propertySheet>
+            </property>
+          </propertySheet>
+        </property>
+      </propertySheet>
+      
+      <formalParameter>
+        <formalParameterName>Coverity_path</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Path where Coverity bin folder is located, otherwise default will be assumed</description>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Intermediate_directory</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Is the directory that stores the code base's intermediate representation and output from the analysis step.</description>
+        <required>1</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Language</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Programming language you use in your project.</description>
+        <required>1</required>
+        <type>select</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Build_command</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Is the command you use to run your usual build.</description>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Debug</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>If checked it turns on basic debugging output.</description>
+        <required>0</required>
+        <type>checkbox</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Verbosity_level</formalParameterName>
+        <defaultValue>1</defaultValue>
+        <description>Set the detail level of command messages. Higher is more verbose (more messages).</description>
+        <required>0</required>
+        <type>radio</type>
+      </formalParameter>
+
+      <formalParameter>
+        <formalParameterName>AssemblyFiles</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>C# assembly files (.exe or .dll) to analyze. Separate multiple file or path names with a space.</description>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>Config_file</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Use the specified configuration file instead of the default configuration.</description>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>ExtraBuildCommands</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Additional commands to be entered</description>
+        <required>0</required>
+        <type>textarea</type>
+      </formalParameter>
+      
+      <formalParameter>
+        <formalParameterName>ExtraAnalyzeCommands</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Additional commands to be entered</description>
+        <required>0</required>
+        <type>textarea</type>
+      </formalParameter>
+        
+      <formalParameter>
+        <formalParameterName>workingdir</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Working directory</description>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      
+      <step>
+        <stepName>createCoverityCommandLine</stepName>
+        <alwaysRun>0</alwaysRun>
+        <broadcast>0</broadcast>
+        <command>$[/projects/$[/plugins/EC-Coverity/projectName]/scripts/CoverityDriver];</command>
+        <condition></condition>
+        <description></description>
+        <errorHandling>failProcedure</errorHandling>
+        <exclusive>0</exclusive>
+        <logFileName></logFileName>
+        <parallel>0</parallel>
+        <postProcessor></postProcessor>
+        <releaseExclusive>0</releaseExclusive>
+        <resourceName></resourceName>
+        <retries>0</retries>
+        <shell>ec-perl</shell>
+        <timeLimit></timeLimit>
+        <timeLimitUnits>minutes</timeLimitUnits>
+        <workingDirectory></workingDirectory>
+        <workspaceName></workspaceName>
+        <procedureName>runCoverity</procedureName>
+        <projectName>EC-Coverity</projectName>
+        <propertySheet>
+          <property>
+            <propertyName>ec_customEditorData</propertyName>
+            <propertySheet>
+              <property>
+                <propertyName>formType</propertyName>
+                <expandable>1</expandable>
+                <value>command</value>
+              </property>
+            </propertySheet>
+          </property>
+        </propertySheet>
+      </step>
+      
+      <step>
+        <stepName>runCoverityCommandLine</stepName>
+        <alwaysRun>0</alwaysRun>
+        <broadcast>0</broadcast>
+        <command>
+            $[/myCall/buildCommandLine]
+            $[/myCall/AnalyzeCommandLine]
+        </command>
+        <condition></condition>
+        <description></description>
+        <errorHandling>failProcedure</errorHandling>
+        <exclusive>0</exclusive>
+        <logFileName></logFileName>
+        <parallel>0</parallel>
+        <postProcessor>postp --loadProperty /myProject/postp_matchers</postProcessor>
+        <releaseExclusive>0</releaseExclusive>
+        <resourceName></resourceName>
+        <retries>0</retries>
+        <shell></shell>
+        <timeLimit></timeLimit>
+        <timeLimitUnits>minutes</timeLimitUnits>
+        <workingDirectory>$[/myCall/workingdir]</workingDirectory>
+        <workspaceName></workspaceName>
+        <procedureName>runCoverity</procedureName>
+        <projectName>EC-Coverity</projectName>
+        <propertySheet>
+          <property>
+            <propertyName>ec_customEditorData</propertyName>
+            <propertySheet>
+              <property>
+                <propertyName>formType</propertyName>
+                <expandable>1</expandable>
+                <value>command</value>
+              </property>
+            </propertySheet>
+          </property>
+        </propertySheet>
+      </step>
+    </procedure>
+  </project>
+</exportedData>

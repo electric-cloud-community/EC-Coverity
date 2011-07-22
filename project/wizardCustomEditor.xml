@@ -1,0 +1,112 @@
+<step>
+    <project>/plugins/EC-Coverity/project</project>
+    <procedure>runCoverity</procedure>
+    <category>Code Analysis Tools</category>
+    <editor>
+    
+	    <label>Invoke Coverity</label>
+	    <description>Execute static analisis to C/C++, Java and C# source</description>
+
+	    <formElement>
+	        <type>entry</type>
+	        <label>Coverity bin folder:</label>
+	        <property>Coverity_path</property>
+	        <required>0</required>
+	        <value></value>
+	        <documentation>Path where Coverity bin folder is located, otherwise default will be assumed</documentation>
+	    </formElement>
+	    
+	    <formElement>
+	        <type>entry</type>
+	        <label>Intermediate Directory:</label>
+	        <property>Intermediate_directory</property>
+	        <required>1</required>
+	        <documentation>Is the directory that stores the code base's intermediate representation and output from the analysis step.</documentation>
+	    </formElement>	    
+	    
+	    <formElement>
+	        <type>select</type>
+	        <label>Language:</label>
+	        <property>Language</property>
+	        <required>1</required>
+	        <documentation>Programming language you use in your project</documentation>
+            <option><name>C++</name><value>cpp</value></option>
+            <option><name>Java</name><value>java</value></option>
+            <option><name>C#</name><value>csharp</value></option>
+	    </formElement>
+	    
+        <formElement>
+	        <type>entry</type>
+	        <label>Build command:</label>
+	        <property>Build_command</property>
+	        <required>0</required>
+	        <documentation>Is the command you use to run your usual build.(if the command line contains a path, it must be quoted)</documentation>
+	    </formElement>
+        
+        <formElement>
+	    	<type>checkbox</type>
+	    	<label>Debug:</label>
+	    	<property>Debug</property>
+	    	<checkedValue>1</checkedValue>
+	    	<uncheckedValue>0</uncheckedValue>
+	    	<required>0</required>
+	    	<documentation>If checked it turns on basic debugging output.</documentation>
+	    </formElement>
+        
+        <formElement>
+            <type>radio</type>
+            <label>Verbosity level:</label>
+            <property>Verbosity_level</property>
+            <required>0</required>
+            <documentation>Set the detail level of command messages. Higher is more verbose (more messages).</documentation>
+            <option><name>1</name><value>1</value></option>
+            <option><name>2</name><value>2</value></option>
+            <option><name>3</name><value>3</value></option>
+            <option><name>4</name><value>4</value></option>
+        </formElement>
+        
+        <formElement>
+	        <type>entry</type>
+	        <label>C# assembly files (.exe or .dll):</label>
+	        <property>AssemblyFiles</property>
+	        <required>0</required>
+	        <value></value>
+	        <documentation>C# assembly files (.exe or .dll) to analyze. Separate multiple file or path names with a space.</documentation>
+	    </formElement>	
+        
+	    <formElement>
+	        <type>entry</type>
+	        <label>Configuration file:</label>
+	        <property>Config_file</property>
+	        <required>0</required>
+	        <value></value>
+	        <documentation>Use the specified configuration file instead of the default configuration.</documentation>
+	    </formElement>	
+	    
+	    <formElement>
+	        <type>textarea</type>
+	        <label>Additional commands for cov-build:</label>
+	        <property>ExtraBuildCommands</property>
+	        <required>0</required>
+	        <documentation>Additional commands to be entered</documentation>
+	    </formElement>
+        
+        <formElement>
+	        <type>textarea</type>
+	        <label>Additional commands for (cov-analyze/cov-analyze-java/cov-analyze-cs):</label>
+	        <property>ExtraAnalyzeCommands</property>
+	        <required>0</required>
+	        <documentation>Additional commands to be entered</documentation>
+	    </formElement>
+
+	    <formElement>
+	        <type>entry</type>
+	        <label>Working directory:</label>
+	        <property>workingdir</property>
+	        <required>0</required>
+	        <value></value>
+	        <documentation>Working directory</documentation>
+	    </formElement>	
+
+	</editor>
+</step>
