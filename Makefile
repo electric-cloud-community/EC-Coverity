@@ -5,7 +5,7 @@ include $(SRCTOP)/build/vars.mak
 build: package
 unittest:
 
-systemtest: start-selenium test-setup test-run stop-selenium
+systemtest: test-setup test-run
 
 emmatest:
 	$(MAKE) NTESTFILES="systemtest/emma.ntest" RUNEMMATESTS=1 test-setup test-run
