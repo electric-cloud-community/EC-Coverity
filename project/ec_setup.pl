@@ -5,7 +5,6 @@ my %runCoverity = (
     category    => "Code Analysis"
 );
 
-$batch->deleteProperty("/server/ec_customEditors/pickerStep/Coverity - Code Analysis");  
-$batch->deleteProperty("/server/ec_customEditors/pickerStep/coverity");
+$batch->deleteProperty("/server/ec_customEditors/pickerStep/Coverity - Code Analysis");
 
 @::createStepPickerSteps = (\%runCoverity);
