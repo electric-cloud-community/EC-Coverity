@@ -8,7 +8,7 @@
     <author>Electric Cloud</author>
     <authorUrl>http://www.electric-cloud.com/support</authorUrl>
     <commander-version min="3.6"/>
-    <help>help.xml</help>
+    <help>EC-Coverity_help.xml</help>
     <components>
         <component name="configure">
         </component>

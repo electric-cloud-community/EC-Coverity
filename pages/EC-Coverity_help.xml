@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+  <meta content="text/html; charset=us-ascii" http-equiv=
+  "content-type" />
+
+  <title>Electric Commander Plugin for Coverity</title>
+  <link rel="stylesheet" href=
+  "../../plugins/EC-Coverity/pluginhelp.css" type="text/css" media=
+  "screen" />
+</head>
+
+<body>
+  <div class="help">
+    <h1 class="help">Coverity</h1>
+
+    <h2 class="help">Overview</h2>
+
+    <p class="help">This plugin allows you to use Coverity to
+    analyze and find defects in C++, C#, and Java source code.</p>
+
+    <p class="help"><b>Supported Coverity version</b><br />
+    This plugin was developed and tested with Coverity version
+    5.3.0.</p>
+
+    <h2 class="help">Configuration</h2>
+
+    <p class="help">You do not need to configure the plugin before
+    using it.</p>
+
+    <h2 class="help">Using the plugin</h2>
+
+    <p class="help">See the <a href=
+    "/commander/link/showHelp?page=plugins&amp;section=using">Commander
+    online help system</a> for details about how to use this plugin
+    within a procedure.</p>
+
+    <p class="help">When you provide information for this plugin,
+    fill-in the fields as follows:</p>
+
+    <ul>
+      <li><b>Coverity bin folder</b> - Supply the path to the
+      Coverity bin folder, example: C:/Program
+      files/Coverity/Coverity Static Analysis/bin, otherwise the
+      default location will be assumed.</li>
+
+      <li><b>Intermediate Directory</b> - Provide the path to the
+      directory that stores the code base's intermediate
+      representation and output from the analysis step.</li>
+
+      <li><b>Language</b> - Select the language used in your
+      project.</li>
+
+      <li><b>Build command</b> - Provide the command you normally
+      use to run your build<br />
+      Note: if the command you provide contains a path, it must be
+      quoted.</li>
+
+      <li><b>Debug</b> - If checked, this turns on basic debugging
+      output.</li>
+
+      <li><b>Verbosity level</b> - Set the detail level of command
+      messages. Higher numbers provide more verbosity (more
+      messages).</li>
+
+      <li><b>C# assembly files</b> - Provide C# assembly files
+      (.exe or .dll) to analyze.<br />
+      Notes: This options is only needed when you use c#.<br />
+      Separate multiple file or path names with a space.</li>
+
+      <li><b>Configuration file</b> - Use the specified
+      configuration file instead of the default configuration.</li>
+
+      <li><b>Additional commands for cov-build</b> - Enter any
+      additional commands.</li>
+
+      <li><b>Additional commands for
+      (cov-analyze/cov-analyze-java/cov-analyze-cs)</b> - Enter any
+      additional commands.</li>
+
+      <li><b>Working directory</b> - Indicate the desired working
+      directory. Leave blank to use the default workspace.</li>
+    </ul>
+
+    <h2 class="help">Additional Information</h2>
+
+    <ul>
+      <li><a href=
+      "http://www.coverity.com/products/static-analysis.html">Coverity
+      Static Analysis page</a></li>
+    </ul>
+  </div>
+</body>
+</html>
