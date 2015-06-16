@@ -3,7 +3,7 @@
     <key>@PLUGIN_KEY@</key>
     <version>@PLUGIN_VERSION@</version>
     <label>@PLUGIN_KEY@</label>
-    <description>Integrates Coverity code analysis tools into Electric Commander</description>
+    <description>Integrates Coverity code analysis tools into ElectricFlow</description>
     <category>Code Analysis</category>
     <author>Electric Cloud</author>
     <authorUrl>http://www.electric-cloud.com/support</authorUrl>
