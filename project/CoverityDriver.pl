@@ -27,18 +27,18 @@
 	use ElectricCommander;
 	use warnings;
 	use strict;
-	use Cwd;	
+	use Cwd;
 	$|=1;
-	
+
     # -------------------------------------------------------------------------
 	# Constants
 	# -------------------------------------------------------------------------
 	use constant {
 	   BUILDEXEC => "cov-build",
 	};
-    
+
 	########################################################################
-	# trim - deletes blank spaces before and after the entered value in 
+	# trim - deletes blank spaces before and after the entered value in
 	# the argument
 	#
 	# Arguments:
@@ -47,7 +47,7 @@
 	# Returns:
 	#   trimmed string
 	#
-	########################################################################  
+	########################################################################
 	sub trim{
         my ($untrimmedString) = @_;
         my $string = $untrimmedString;
@@ -55,7 +55,7 @@
         $string =~ s/\s+$//;
         return $string;
 	}
-	
+
 	# -------------------------------------------------------------------------
 	# Variables
 	# -------------------------------------------------------------------------
@@ -70,7 +70,7 @@
     $::gExtraAnalyzeCommands = trim("$[ExtraAnalyzeCommands]");
     $::gWorkingDir           = trim(q($[workingdir]));
 	$::gAssemblyFiles        = trim(q($[AssemblyFiles]));
-    
+
 	#more global variables to be added here
 
 	# -------------------------------------------------------------------------
@@ -79,7 +79,7 @@
 
 
 	########################################################################
-	# main - contains the whole process to be done by the plugin, it builds 
+	# main - contains the whole process to be done by the plugin, it builds
 	#        the command line, sets the properties and the working directory
 	#
 	# Arguments:
@@ -90,27 +90,27 @@
 	#
 	########################################################################
 	sub main {
-    
+
         # create args array
         my @covBuildArgs = ();
         my @covAnalyzeArgs = ();
-        
+
         #properties' map
         my %props;
-        
+
         my $binDirectory = "";
-        
+
         if($::gCoverityPath && $::gCoverityPath ne ""){
-            $binDirectory = $::gCoverityPath;       
+            $binDirectory = $::gCoverityPath;
         }
         if($binDirectory ne ""){
             push(@covBuildArgs, '"' . $binDirectory . "/" . BUILDEXEC . '"');
         }else{
             push(@covBuildArgs, BUILDEXEC);
         }
-        
+
         my $AnalyzeExecutable = "";
-        
+
         #depending on the language we use, the analyzer executable will change
         if($::gLanguage && $::gLanguage ne "")
         {
@@ -127,20 +127,20 @@
                 push(@covAnalyzeArgs, $AnalyzeExecutable);
             }
         }
-        
+
         #change default config file
         if($::gConfigFile && $::gConfigFile ne ""){
             push(@covBuildArgs,   "--config " . '"' . $::gConfigFile . '"');
             push(@covAnalyzeArgs, "--config " . '"' . $::gConfigFile . '"');
         }
-        
+
         #assembly files for cov-Analyze-cs
         if($::gLanguage && $::gLanguage eq "csharp"){
            if($::gAssemblyFiles && $::gAssemblyFiles ne ""){
                 push(@covAnalyzeArgs, $::gAssemblyFiles);
            }
         }
-        
+
         #enable debug mode
         if($::gDebug && $::gDebug ne ""){
             push(@covBuildArgs , "--debug");
@@ -148,37 +148,37 @@
                 push(@covAnalyzeArgs , "--debug");
             }
         }
-        
+
         #intermediate directory
         if($::gDirectory && $::gDirectory ne ""){
             push(@covBuildArgs,   "--dir " . '"' . $::gDirectory . '"');
             push(@covAnalyzeArgs, "--dir " . '"' . $::gDirectory . '"');
         }
-        
+
         #verbose level (from 1 to 4) cov-Analyze-cs doesn't support this option
         if($::gVerboseLevel && $::gVerboseLevel ne "" && $::gLanguage && $::gLanguage ne "csharp"){
             push(@covAnalyzeArgs, "--verbose $::gVerboseLevel");
         }
-        
+
         #the command user usually uses for build his/her project
         if($::gBuildCommand && $::gBuildCommand ne ""){
             push(@covBuildArgs, $::gBuildCommand);
         }
-        
+
         #extra build options
         if($::gExtraBuildCommands && $::gExtraBuildCommands ne ""){
             push(@covBuildArgs, $::gExtraBuildCommands);
         }
-        
+
         #extra analisys options
         if($::gExtraAnalyzeCommands && $::gExtraAnalyzeCommands ne "")
         {
             push(@covAnalyzeArgs, $::gExtraAnalyzeCommands);
         }
-        
+
         #generate the command(s) to execute in console
-        
-        #we won´t generate a build command line if the user did not specify the build command
+
+        #we won't generate a build command line if the user did not specify the build command
         if($::gBuildCommand && $::gBuildCommand ne ""){
             $props{"buildCommandLine"} = createCommandLine(\@covBuildArgs);
         }else
@@ -189,9 +189,9 @@
         if($::gWorkingDir && $::gWorkingDir ne ""){
             $props{"workingdir"} = $::gWorkingDir;
         }
-        
+
         setProperties(\%props);
-    
+
 	}
 
 	########################################################################
@@ -199,7 +199,7 @@
 	# of the program to be executed.
 	#
 	# Arguments:
-	#   -arr: array containing the command name and the arguments entered by 
+	#   -arr: array containing the command name and the arguments entered by
 	#         the user in the UI
 	#
 	# Returns:
@@ -221,14 +221,14 @@
 		}
 
 		return $command;
-		
+
 	}
 
 	########################################################################
 	# setProperties - set a group of properties into the Electric Commander
 	#
 	# Arguments:
-	#   -propHash: hash containing the ID and the value of the properties 
+	#   -propHash: hash containing the ID and the value of the properties
 	#              to be written into the Electric Commander
 	#
 	# Returns:
@@ -246,7 +246,7 @@
         my $xpath = $ec->getPlugin($pluginKey);
         my $pluginName = $xpath->findvalue('//pluginVersion')->value;
         print "Using plugin $pluginKey version $pluginName\n";
-        
+
 		foreach my $key (keys % $propHash) {
 			my $val = $propHash->{$key};
 			$ec->setProperty("/myCall/$key", $val);
