@@ -16,7 +16,7 @@
 <body>
   <div class="help">
     <h1 class="help">Coverity</h1>		 <p>Plugin Version @PLUGIN_VERSION@</p>     <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"     noshade="noshade" />
-	<p>Revised on July 1, 2015</p>	<h1>Contents</h1>	<ul>	<li><p><a href="#overview">Overview</a></p></li>	<li><p><a href="#procedures">Plugin Procedures</a></p></li>	<li><p><a href="#rns">Release Notes</a></p></li>		</ul>	<h1 id="overview">Overview</h1>
+	<p>Revised on December 27, 2018</p>	<h1>Contents</h1>	<ul>	<li><p><a href="#overview">Overview</a></p></li>	<li><p><a href="#procedures">Plugin Procedures</a></p></li>	<li><p><a href="#rns">Release Notes</a></p></li>		</ul>	<h1 id="overview">Overview</h1>
     <p class="help">This plugin allows you to use Coverity to
     analyze and find defects in C++, C#, and Java source code.</p>
 	<p class="help">For more information, see the <a href=      "http://www.coverity.com/products/static-analysis.html">Coverity      Static Analysis page</a>.</p>
@@ -69,7 +69,11 @@
 
       <li><b>Working directory</b>—Enter the desired working
       directory. Leave blank to use the default workspace.</li>
-    </ul>        <h1 id="rns">Release Notes</h1>        <h2>@PLUGIN_KEY@-1.0.2</h2>        <ul>            <li>Renamed ElectricCommander to ElectricFlow.</li>        </ul>        <h2>@PLUGIN_KEY@-1.0.1</h2>        <ul>            <li>Initial release.</li>        </ul>		
+    </ul>        <h1 id="rns">Release Notes</h1>
+        <h2>@PLUGIN_KEY@-1.0.3</h2>
+        <ul>
+            <li>The plugin icon has been updated.</li>
+        </ul>        <h2>@PLUGIN_KEY@-1.0.2</h2>        <ul>            <li>Renamed ElectricCommander to ElectricFlow.</li>        </ul>        <h2>@PLUGIN_KEY@-1.0.1</h2>        <ul>            <li>Initial release.</li>        </ul>		
   </div>
 </body>
 </html>
