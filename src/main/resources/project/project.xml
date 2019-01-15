@@ -4,7 +4,12 @@
   <project>
     <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
     <propertySheet>
-
+      <!-- Improvement for ECPANALYSISCOVERITY-5 -->
+      <property>
+        <propertyName>ec_icon</propertyName>
+        <value>images/icon-plugin.svg</value>
+      </property>
+      <!-- End of improvement for ECPANALYSISCOVERITY-5 -->
       <property>
         <propertyName>scripts</propertyName>
         <description></description>
