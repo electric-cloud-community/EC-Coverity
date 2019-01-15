@@ -1,0 +1,19 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+  <file>
+    <path>CoverityDriver.pl</path>
+    <xpath>//property[propertyName=&quot;CoverityDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>postp_matchers.pl</path>
+    <xpath>//property[propertyName=&quot;postp_matchers&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>wizardCustomEditor.xml</path>
+    <xpath>//property[propertyName=&quot;wizardCustomEditor&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_setup.pl</path>
+    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+  </file>
+</fileset>
